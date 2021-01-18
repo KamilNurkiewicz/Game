@@ -1,9 +1,12 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 import "./../scss/global.scss";
-import { HelloWorld } from "./components/App";
+import { App } from "./components/App";
+import {StateProvider} from "./shared/hooks/StateProvider";
 
 ReactDOM.render(
-  <HelloWorld userName="Kamileg" lang="TypeScript" />,
+  <StateProvider>
+     <App/>
+  </StateProvider>,
   document.getElementById("root")
 );
